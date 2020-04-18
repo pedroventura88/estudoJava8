@@ -40,8 +40,13 @@ public class trabalhandoStream {
                 .stream().filter( tirarRepetidos( registro -> registro.getTipoTelefone() + registro.getNumeroTelefone()))
                 .collect(Collectors.toList());          //registro se transforma em ex.: celular8888
 
-
         listaTelefonesPorTipo.forEach(dado -> System.out.println("TIPO:: "+dado.getTipoTelefone()+" TELEFONE:: "+dado.getNumeroTelefone()));
+
+        //Utilizando Stream para Arrays
+        String[] arrayMadeiras = {"aroeira","cedro","ip","tabaco","aro123","taba123"};
+        System.out.println("FILTRO DE ARRAY SÓ COM NUMEROS:: "
+                +Arrays.stream(arrayMadeiras)
+                .filter( m -> m.contains("123")).collect(Collectors.toList()));
 
     }
 
