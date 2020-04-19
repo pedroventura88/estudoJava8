@@ -20,6 +20,9 @@ public class mainUsuario {
         Consumer mostradorDePontos = new MostradorPontos();
         usuarios.forEach(mostradorDePontos);
 
+        //Implementa um consumer por de baixo dos panos..
+        usuarios.forEach(d -> System.out.println("Nome: "+d.getNome()));
+
 
     }
 }
