@@ -23,6 +23,13 @@ public class mainUsuario {
         //Implementa um consumer por de baixo dos panos..
         usuarios.forEach(d -> System.out.println("Nome: "+d.getNome()));
 
+        //Alterando o objeto. Usuario com pontos acima de 400, se torna moderador.
+        usuarios.stream()
+                .filter(d -> d.getPontos() > 400)
+                .forEach(Usuario::tornaModerador);
+
+        usuarios.forEach(d -> System.out.println("Nome: "+d.getNome() + " : é moderador: "+d.isModerador()));
+
 
     }
 }
