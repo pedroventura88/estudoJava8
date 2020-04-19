@@ -30,6 +30,5 @@ public class mainUsuario {
 
         usuarios.forEach(d -> System.out.println("Nome: "+d.getNome() + " : é moderador: "+d.isModerador()));
 
-
     }
 }
